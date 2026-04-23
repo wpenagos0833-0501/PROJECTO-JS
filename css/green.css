@@ -1,0 +1,16 @@
+body {
+    background:url("../img/hojas.jpg"); /* Imagen de fondo */
+    background-attachment: fixed;       /* El fondo se queda quieto al bajar con el scroll */
+}
+
+#logo{
+background: #235E3D;     /* Verde oscuro (tu color principal) */
+}
+#menu ul li:hover{
+    background:#235E3D;      /* Cambia a verde cuando pasas el ratón */
+}
+/* Botón "Leer más" */
+.button-more{
+
+   background: #235E3D;
+}

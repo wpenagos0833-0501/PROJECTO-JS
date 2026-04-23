@@ -1,0 +1,144 @@
+<!DOCTYPE HTML> <!-- Declara que el documento es HTML5 -->
+<html lang="es"> <!-- Etiqueta raíz del documento; lang="es" indica que el idioma es español -->
+
+<head> <!-- Sección de metadatos, no visible en la página -->
+
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres (permite tildes, ñ, etc.) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Hace que la página sea responsive: se adapta al ancho del dispositivo -->
+
+    <title>Proyecto con JavaScript - Wilson</title>
+
+
+    <!-- Enlaza la hoja de estilos CSS propia del proyecto (archivo local) -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link id="theme" rel="stylesheet" type="text/css" href="css/green.css"/>
+
+    <!-- Carga la librería jQuery desde Google CDN (simplifica el uso de JavaScript) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css"/>
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css"/>
+
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Enlaza el archivo JavaScript principal del proyecto (lógica personalizada) -->
+
+</head>
+
+<body> <!-- Contiene todo el contenido visible de la página -->
+<div id="selector-theme">
+    <div id="to-green"></div>
+    <div id="to-red"></div>
+    <div id="to-blue"></div>
+
+</div>
+
+
+<section id="global"> <!-- Sección contenedora principal de toda la página -->
+
+    <header> <!-- Encabezado de la página -->
+
+        <div id="logo"> <!-- Contenedor del logo o nombre del sitio -->
+            Proyecto Wilson <!-- Texto que actúa como logo/nombre del sitio -->
+        </div>
+
+        <div class="clearfix"></div>
+        <!-- Div auxiliar para limpiar los elementos flotantes (float) en CSS -->
+
+        <nav id="menu"> <!-- Barra de navegación principal del sitio -->
+            <ul> <!-- Lista desordenada que contiene los elementos del menú -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reloj.html">reloj</a></li>
+                <li><a href="about.html">Sobre mí</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <section id="content">
+        <!-- Sección principal de contenido (artículos + barra lateral) -->
+
+        <!-- ZONA DE PUBLICACIONES -->
+         <h2>quien soy</h2>
+        <div id="box">
+            <!-- Contenedor vacío donde JavaScript insertará acordeon -->
+            <div id="acordeon">
+            <h3>¿quien somos</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nulla malesuada,
+                    porttitor nisl at, gravida tellus. Integer tincidunt diam sit amet velit malesuada venenatis.
+                    Donec non erat ut lectus pretium viverra condimentum in ante
+                </p>
+                <h3>¿Nuestro servicios</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nulla malesuada,
+                    porttitor nisl at, gravida tellus. Integer tincidunt diam sit amet velit malesuada venenatis.
+                    Donec non erat ut lectus pretium viverra condimentum in ante
+                </p>
+                <h3>Nuestro clientes</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nulla malesuada,
+                    porttitor nisl at, gravida tellus. Integer tincidunt diam sit amet velit malesuada venenatis.
+                    Donec non erat ut lectus pretium viverra condimentum in ante
+                </p>
+
+            </div>
+        </div>
+
+        <!-- BARRA LATERAL DERECHA -->
+        <aside id="sidebar">
+            <!-- Columna lateral con información adicional -->
+
+            <!-- BLOQUE: SOBRE EL AUTOR -->
+            <div id="about">
+                <h4><span>¿Quién soy?</span></h4> <!-- Título de la sección -->
+                <img src="img/caracol.jpg" title="caracol" alt="caracol"> <!-- Foto del autor -->
+                <p>Descripción personal del autor del proyecto.</p> <!-- Texto de presentación -->
+            </div>
+
+            <!-- BLOQUE: FORMULARIO DE LOGIN -->
+            <div id="login">
+                <h4><span>Identifícate</span></h4> <!-- Título del formulario -->
+                <form autocomplete="off"> <!-- Formulario de identificación de usuario -->
+
+                    <label for="name">Nombre</label> <!-- Etiqueta asociada al campo nombre -->
+                    <input type="text" name="name" id="name"/>     <!-- Campo de texto para el nombre -->
+
+                    <label for="email">Correo</label> <!-- Etiqueta asociada al campo email -->
+                    <input type="email" name="email" id="email"/>
+                    <!-- Campo de email (valida formato automáticamente) -->
+
+                    <label for="password">Contraseña</label> <!-- Etiqueta asociada al campo contraseña -->
+                    <input type="password" name="password" id="password"/>
+                    <!-- Campo de contraseña (oculta los caracteres) -->
+
+                    <input type="submit" value="Entrar"> <!-- Botón para enviar el formulario -->
+
+                </form>
+            </div>
+
+            </aside>
+
+            <div class="clearfix"></div>
+            <!-- Limpia los flotantes para que el footer no suba junto al sidebar -->
+
+    </section>
+
+</section> <!-- Cierre de #global -->
+
+<!-- PIE DE PÁGINA -->
+<footer> <!-- Sección de pie de página -->
+    Página de Wilson Penagos &copy; 2026
+    <a href="#" class="subir">ir arriba</a>
+    <!-- Texto de autoría; &copy; es el símbolo de copyright © -->
+</footer>
+
+</body>
+</html> <!-- Cierre del documento HTML -->

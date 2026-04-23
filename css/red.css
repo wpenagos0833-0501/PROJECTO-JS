@@ -1,0 +1,16 @@
+body {
+    background:url("../img/rojo.jpg"); /* Imagen de fondo */
+    background-attachment: fixed;       /* El fondo se queda quieto al bajar con el scroll */
+}
+
+#logo{
+background: #CA3413;     /* rojo oscuro (tu color principal) */
+}
+#menu ul li:hover{
+    background:#CA3413;      /* Cambia a rojo cuando pasas el ratón */
+}
+/* Botón "Leer más" */
+.button-more{
+
+   background: #CA3413;
+}

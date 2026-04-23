@@ -1,0 +1,295 @@
+/* --- RESETEO DE ESTILOS --- */
+/* El asterisco selecciona todos los elementos. 
+   Quitamos márgenes y rellenos que los navegadores ponen por defecto. */
+*{
+    margin:0px;
+    padding:0px;
+}
+
+/* --- UTILIDADES --- */
+/* Esta clase sirve para "limpiar" los flotados (float). 
+   Evita que los elementos de abajo se monten sobre los de arriba. */
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+/* --- CUERPO DE LA PÁGINA --- */
+body {
+    /* Este color debe ser un verde oscuro similar al de tu imagen */
+    background-color: #1a3a1a;
+    background-image: url("../img/hojas.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* --- CONTENEDOR PRINCIPAL --- */
+#global{
+    width:65%;               /* Ocupa el 65% del ancho de la pantalla */
+    margin: 0px auto;        /* Centra el contenedor horizontalmente */
+    margin-top: 28px;        /* Espacio arriba para que no pegue al borde */
+    padding: 20px;           /* Espacio interno para que el contenido no pegue a los bordes blancos */
+    background: white;       /* Fondo blanco del rectángulo central */
+    box-shadow: 0px 0px 2px gray; /* Sombra suave alrededor para dar profundidad */
+}
+
+/* --- CABECERA / LOGO --- */
+#logo{
+    font-family: "verdana","Arial";
+    font-size: 30px;
+    letter-spacing: 6px;     /* Separa las letras del logo */
+    line-height: 80px;       /* Centra el texto verticalmente */
+                                 /* Verde oscuro (tu color principal) */
+    color: white;            /* Letras blancas */
+    text-align: center;
+    width: 385px;
+    height: 80px;
+    margin-bottom: 20px;
+    float: left;             /* Se alinea a la izquierda */
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+#menu{
+    font-family: Helvetica,Arial;
+    background: #333;        /* Gris casi negro */
+    width:100%;
+    text-transform: uppercase; /* Pone todo el menú en MAYÚSCULAS */
+    margin-bottom: 20px;
+}
+
+#menu ul{
+    line-height: 46px;
+    list-style: none;        /* Quita los puntos negros de la lista */
+}
+
+#menu ul li{
+    height: 46px;
+    display: inline-block;   /* Pone los elementos uno al lado del otro */
+    transition: all 300ms;   /* Hace que el cambio de color al pasar el mouse sea suave */
+}
+
+#menu ul li:hover{
+    background:#235E3D;      /* Cambia a verde cuando pasas el ratón */
+}
+
+#menu a{
+   display: block;           /* Hace que todo el cuadro del botón sea clickable */
+   color:white;
+   text-decoration: none;    /* Quita el subrayado de los enlaces */
+   padding-left: 30px;
+   padding-right: 30px;
+}
+
+/* --- SECCIÓN DE ARTÍCULOS (POSTS) --- */
+#posts{
+    width: 60%;              /* Ocupa más de la mitad del ancho */
+    float: left;             /* Se pega a la izquierda */
+    font-family: Helvetica,Arial;
+}
+
+.post{
+    padding: 7px;            /* Espacio interno de cada artículo */
+}
+
+h2{
+    font-family: Helvetica,Arial;
+    font-size: 30px;
+    color:#333;
+}
+
+.post .date{
+    display: block;          /* Se comporta como bloque para saltar de línea */
+    color: gray;             /* Color gris para la fecha de Moment.js */
+    margin-top: 5px;
+}
+
+.post p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 22px;       /* Separa las líneas de texto para que sea fácil de leer */
+    text-align: justify;     /* Alinea el texto por ambos lados (como un libro) */
+}
+
+/* Botón "Leer más" */
+.button-more{
+   font-size: 14px;
+   text-align: center;
+   display: block;
+   padding: 15px;
+   color: white;
+   text-decoration: none;
+   margin-top: 10px;
+   width: 70px;
+   margin-bottom: 20px;
+}
+
+/* --- BARRA LATERAL (SIDEBAR) --- */
+#sidebar{
+    font-family: Helvetica, Arial;
+    width: 31%;              /* Ocupa menos de la tercera parte */
+    float: right;            /* Se pega a la derecha */
+}
+
+#sidebar h4{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 10px;
+    color: #333;
+    background: url("../img/lines.png") repeat-x; /* Imagen de fondo que simula líneas laterales */
+}
+
+#sidebar h4 span{
+    background: white;       /* El fondo blanco tapa la línea justo detrás del texto */
+    padding: 5px;
+}
+
+#sidebar img{
+    width: 100%;             /* La imagen del caracol se ajusta al ancho del sidebar */
+}
+
+/* --- FORMULARIOS --- */
+/* Estilo para los campos de texto, email y password */
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    display: block;
+    width: 100%;             /* Ocupan todo el ancho disponible */
+    box-sizing: border-box;  /* Evita que el padding ensanche el input más de la cuenta */
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;      /* Bordes redondeados */
+    box-shadow: inset 0px 1px 3px rgba(0,0,0,0.1); /* Sombra interna para dar profundidad */
+    transition: border 0.3s;
+}
+
+/* Botón de Enviar */
+form input[type="submit"]{
+    background: #ccc;
+    padding: 5px;
+    border: 1px solid #ccc;
+    color:#333;
+    cursor:pointer;          /* El cursor cambia a "manito" al pasar por encima */
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+form input:focus {
+    border: 1px solid #007bff; /* Cambia el borde a azul */
+    outline: none;
+}
+
+/* --- PIE DE PÁGINA --- */
+footer{
+    font-family: Helvetica, Arial;
+    color: white;
+    height: 47px;
+    background: rgba(51, 51, 51, 0.70); /* Gris oscuro con transparencia */
+    margin: 0px auto;
+    width:65%;               /* Mismo ancho que el #global */
+    padding-left: 20px;
+    padding-right:20px;
+    margin-top:50px;
+    line-height: 47px;       /* Centra el texto verticalmente */
+}
+
+/* --- AJUSTES DEL SLIDER --- */
+/* Forzamos a que el slider no sea demasiado alto */
+div.bx-wrapper,
+div.bx-viewport {
+    height:250px!important;  /* !important asegura que esta regla gane a las del plugin */
+}
+/* --- selecion estilo selecto de theme --- */
+
+#selector-theme{
+    position: fixed;
+    top: 40%;
+    background: rgba(51, 51, 51, 0.5);
+    width: 50px;
+    height: 100px;
+}
+/* --- selecion estilo selecto a div theme --- */
+#to-green,
+#to-red,
+#to-blue{
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    display: block;
+    margin: 0px auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+#to-green{
+    background: #235E3D;
+}
+#to-red{
+    background: #CA3413;
+}
+#to-blue{
+    background: #1F87C4;
+}
+/* Estilo para el botón o enlace de "Subir" */
+.subir {
+    background: #235E3D;        /* Fondo blanco */
+    text-decoration: none;    /* Quita el subrayado del enlace */
+    display: block;           /* Hace que se comporte como un bloque/caja */
+    float: right;             /* Lo pega a la derecha de su contenedor */
+    color: white;              /* Le pongo un color de letra oscuro para que se vea */
+    cursor: pointer;          /* Pone la mano al pasar el mouse */
+}
+#box {
+    width: 60%;       /* Cambiamos 60px por 70% para que ocupe el ancho necesario */
+    float: left;      /* Se queda a la izquierda para que el sidebar flote a la derecha */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;    /* Un poco de espacio interno para que el texto no toque los bordes */
+    text-align: justify;
+}
+#acordeon{
+    margin-top: 20px;
+
+}
+/* --- RELOJ CIRCULAR PROFESIONAL --- */
+#reloj {
+    width: 250px;                /* Ancho igual al alto */
+    height: 250px;
+    line-height: 250px;          /* Centra el texto verticalmente */
+
+    font-size: 45px;             /* Ajustamos el tamaño para que quepa */
+    font-family: 'Courier New', Courier, monospace;
+    color: #235E3D;              /* Tu color verde */
+    background: white;
+
+    border: 8px solid #235E3D;   /* Borde más grueso para que resalte el círculo */
+    border-radius: 50%;          /* ¡EL TRUCO! Esto lo hace redondo */
+
+    display: block;              /* Lo tratamos como bloque */
+    margin: 50px auto;           /* Centrado automático en la página */
+    text-align: center;          /* Centrado horizontal del texto */
+
+    /* Sombra elegante */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+
+    /* Para que no se vea plano */
+    transition: all 0.4s ease;
+}
+
+/* Efecto al pasar el mouse */
+#reloj:hover {
+    transform: rotate(5deg) scale(1.05); /* Se inclina y crece un poquito */
+    border-color: #1F87C4;               /* Cambia al azul de tu proyecto */
+    color: #1F87C4;
+}
+.form-error{
+   /* float: right; */
+    font-size: 11px;
+    background: red;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+
+
+

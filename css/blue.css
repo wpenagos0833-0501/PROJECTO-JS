@@ -1,0 +1,15 @@
+body {
+    background:url("../img/cielo.jpg"); /* Imagen de fondo */
+    background-attachment: fixed;       /* El fondo se queda quieto al bajar con el scroll */
+}
+
+#logo{
+background: #1f87c4;     /* azul (tu color principal) */
+}
+#menu ul li:hover{
+    background:#1f87c4;      /* Cambia a verde cuando pasas el ratón */
+}
+/* Botón "Leer más" */
+.button-more{
+background: #1f87c4;
+}
